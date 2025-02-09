@@ -1,0 +1,368 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    padding: 20px;
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Header */
+.header {
+    background: #007BFF;
+    color: white;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+/* Header Responsiveness */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.cta-btn {
+    background: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-btn:hover {
+    background: #cc0000;
+}
+
+/* Hero Section Responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+/* About Section */
+.about {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 0;
+    background: #f4f4f9;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-item h3 {
+    margin-bottom: 10px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.testimonial-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-item p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial-item span {
+    font-weight: bold;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 0;
+    background: #007BFF;
+    color: white;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #ff4d4d;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #cc0000;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* General Responsiveness */
+/* Screen below 768px */
+@media (max-width: 768px) {
+    /* Global adjustments for smaller screens */
+    .container {
+        width: 95%;
+        padding: 0 15px; /* Add side margin */
+    }
+
+    /* Reduce padding in sections */
+    .about,
+    .services,
+    .testimonials,
+    .contact {
+        padding: 30px 0;
+    }
+
+    /* Reduces font size in titles */
+    h2 {
+        font-size: 24px;
+    }
+
+    /* Adjust call to action button */
+    .cta-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Adjust form */
+    .contact-form {
+        padding: 0 15px;
+    }
+}
+
+/* Adding specific media query for screens smaller than 244px */
+@media (max-width: 244px) {
+    /* Global Adjustments */
+    .container {
+        width: 100%; /* Occupies the entire available width */
+        padding: 0 10px; /* Reduces side margin for very small screens */
+    }
+
+    /* Header */
+    .nav-list {
+        flex-direction: column;
+        gap: 5px; /* Reduces spacing between menu items */
+    }
+
+    .nav-list a {
+        font-size: 12px; /* Decreases menu font size */
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 30px 10px; /* Reduces padding to avoid overflow */
+    }
+
+    .hero h2 {
+        font-size: 20px; /* Decreases title size */
+    }
+
+    .hero p {
+        font-size: 12px; /* Decreases text size */
+    }
+
+    .cta-btn {
+        font-size: 10px; /* Decreases button size */
+        padding: 5px 10px; /* Reduces button padding */
+    }
+
+    /* About Section */
+    .about h2 {
+        font-size: 20px; /* Decreases title size */
+    }
+
+    /* Services Section */
+    .service-grid {
+        grid-template-columns: 1fr; /* Forces one column only */
+        gap: 10px; /* Reduces spacing between items */
+    }
+
+    .service-item {
+        padding: 10px; /* Reduces internal padding */
+        font-size: 12px; /* Decreases text size */
+    }
+
+    .service-item h3 {
+        font-size: 14px; /* Decreases title size */
+    }
+
+    /* Testimonials Section */
+    .testimonial-grid {
+        grid-template-columns: 1fr; /* Forces one column only */
+        gap: 10px; /* Reduces spacing between items */
+    }
+
+    .testimonial-item {
+        padding: 10px; /* Reduces internal padding */
+        font-size: 12px; /* Decreases title size */
+    }
+
+    .testimonial-item p {
+        font-size: 12px; /* Decreases text size */
+    }
+
+    .testimonial-item span {
+        font-size: 12px; /* Decreases author name size */
+    }
+
+    /* Contact Section */
+    .contact-form {
+        padding: 0 10px; /* Adds side padding for the form */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 12px; /* Decreases text size in the inputs */
+        padding: 5px; /* Reduces internal padding */
+    }
+
+    .contact-form button {
+        font-size: 10px; /* Decreases button size */
+        padding: 5px 10px; /* Reduces button padding */
+    }
+}
